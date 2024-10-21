@@ -1892,11 +1892,20 @@
 
 // public : 
 
-// Employee(string name, int age, int emp_id, int salary){   // constructor
-//     this->name = name;
-//     this->age = age;
-//     this->emp_id = emp_id;
-//     this->salary = salary;
+// Employee(){
+//     this->name = "ABC";
+//     this->age = 11;
+//     this->emp_id = 1212;
+//     this->salary = 123456789;
+// }
+
+// // Parameterized Constructor
+
+// Employee(string name1, int age1, int emp_id1, int salary1){   // constructor
+//     name = name1;
+//     age = age1;
+//     emp_id = emp_id1;
+//     salary = salary1;
 // }
 
 //     void introduction(){
@@ -1910,8 +1919,12 @@
 
 // int main(){
 //     Employee e1("Pawan",24, 123, 2345);   // create object 
+//     Employee e2("Vansh",20, 12323, 232345);   // create object 
+//     Employee e3;
 
 //   e1.introduction();
+//   e2.introduction();
+//   e3.introduction();
 // }
 
 
@@ -2077,3 +2090,49 @@
 // cout<<"Salary : "<<e1.getSalary()<<endl;
 // }
 
+
+
+
+#include<iostream>
+using namespace std;
+
+class Employee{
+
+private:
+    //Data Member
+
+    string name;
+    int age;
+    int emp_id;
+    int salary;
+
+public : 
+
+
+void setDetails(string name, int age, int emp_id, int salary){
+    this->name = name;
+    this->age = age;
+    this->emp_id = emp_id;
+    this->salary = salary;
+}
+
+void display(){
+cout<<"Name : "<<name<<" Age : "<<age<<" Emp Id : "<<emp_id<<" Salary : "<<salary<<endl;
+}
+};
+
+int main(){
+ Employee emp[2];
+
+ emp[0].setDetails("Pawan",24,123,1000);
+
+
+ emp[1].setDetails("Vansh",21,111,9999);
+
+
+ cout<<"Employee Details : "<<endl;
+
+ for(int i = 0; i<2; i++){
+    emp[i].display();
+ }
+}

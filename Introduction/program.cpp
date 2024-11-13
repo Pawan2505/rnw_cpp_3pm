@@ -184,62 +184,92 @@
 
 // Copy Constructor
 
+// #include<iostream>
+// using namespace std;
+
+// class Complex{
+//     private:
+//     int real;
+//     int imag;
+
+
+//     public : 
+
+//     //parameterless constructor
+//     Complex(){
+//         this->real = 0;
+//         this->imag = 0;
+//          cout<<"Parameterless Constructor "<<endl;
+
+//     }
+
+//     //Parameterized Constructor
+
+//     Complex(int real, int imag){
+//         this->real = real;
+//         this->imag = imag;
+
+//         cout<<"Parameterized Constructor "<<endl;
+//     }
+
+//     //Copy Constructor
+
+//     Complex(Complex &other){
+
+//         this->real = other.real;
+//         this->imag = other.imag;
+
+//                cout<<"Copy Constructor "<<endl;
+
+//     }
+
+
+//     void printRecord(){
+//         cout<<"Real Number : "<<this->real<<endl;
+//         cout<<"Imaginary Number : "<<this->imag<<endl;
+//     }
+// };
+
+
+// int main(){
+//     Complex c1(10,20); // Parameterized Constructor
+    
+//     c1.printRecord(); 
+//     Complex c2;   // Parameterless constructor
+    
+//     c2.printRecord();
+
+//     Complex c3 = c1; // Copy Constructor
+
+//     c3.printRecord();
+// }
+
+
+
 #include<iostream>
 using namespace std;
 
-class Complex{
-    private:
-    int real;
-    int imag;
+class Sample{
+    public :
 
+    // constructor
 
-    public : 
-
-    //parameterless constructor
-    Complex(){
-        this->real = 0;
-        this->imag = 0;
-         cout<<"Parameterless Constructor "<<endl;
-
+    Sample(){
+        cout<<"Constructor called. object create"<<endl;
     }
 
-    //Parameterized Constructor
-
-    Complex(int real, int imag){
-        this->real = real;
-        this->imag = imag;
-
-        cout<<"Parameterized Constructor "<<endl;
-    }
-
-    //Copy Constructor
-
-    Complex(Complex &other){
-
-        this->real = other.real;
-        this->imag = other.imag;
-
-               cout<<"Copy Constructor "<<endl;
-
-    }
-
-
-    void printRecord(){
-        cout<<"Real Number : "<<this->real<<endl;
-        cout<<"Imaginary Number : "<<this->imag<<endl;
+    ~Sample(){
+        cout<<"Destructor Called. object Destroyed"<<endl;
     }
 };
 
 
 int main(){
-    Complex c1(10,20); // Parameterized Constructor
-    
-    c1.printRecord(); 
-    Complex c2;   // Parameterless constructor
-    
-    c2.printRecord();
+    cout<<"Creating an object of simple class."<<endl;
 
-    Complex c3 = c1; // Copy Constructor
+    Sample obj;  // created object
 
-    c3.printRecord();
+        cout<<"Creating an object1 of simple class."<<endl;
+
+    Sample obj1;  // created object
 }

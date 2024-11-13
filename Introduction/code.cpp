@@ -2093,46 +2093,425 @@
 
 
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+
+// private:
+//     //Data Member
+
+//     string name;
+//     int age;
+//     int emp_id;
+//     int salary;
+
+// public : 
+
+
+// void setDetails(string name, int age, int emp_id, int salary){
+//     this->name = name;
+//     this->age = age;
+//     this->emp_id = emp_id;
+//     this->salary = salary;
+// }
+
+// void display(){
+// cout<<"Name : "<<name<<" Age : "<<age<<" Emp Id : "<<emp_id<<" Salary : "<<salary<<endl;
+// }
+// };
+
+// int main(){
+//  Employee emp[2];
+
+//  emp[0].setDetails("Pawan",24,123,1000);
+
+
+//  emp[1].setDetails("Vansh",21,111,9999);
+
+
+//  cout<<"Employee Details : "<<endl;
+
+//  for(int i = 0; i<2; i++){
+//     emp[i].display();
+//  }
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private:
+//     string name;
+//     int age;
+
+//     // Student(string name, int age){
+//     //     this->name = name;
+//     //     this->age = age;
+//     // }
+
+//     //setter 
+// public:
+//     void setDetails(string name, int age){
+//              this->name = name;
+//             this->age = age; 
+//     }
+
+// //getter
+//     void getdisplay(){
+//         cout<<"Name : "<<name<<" Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Student s1;
+
+//     s1.setDetails("Pawan",24);
+
+//     s1.getdisplay();
+   
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private:
+//     string name;
+//     int age;
+
+//     //setter 
+// public:
+//     void setDetails(string name, int age){
+//              this->name = name;
+//             this->age = age; 
+//     }
+
+// //getter
+//     void getdisplay(){
+//         cout<<"Name : "<<name<<" Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Student s1[3];
+
+// s1[0].setDetails("Pawan",24);
+// s1[1].setDetails("Vansh",20);
+// s1[2].setDetails("Pinki",18);
+
+// cout<<" Students Details ; "<<endl;
+
+// for(int i = 0; i < 3; i++){
+//     s1[i].getdisplay();
+// }
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Test{
+//     public:
+//     int num1;
+//     int num2;
+
+//     static int num3;
+
+//     Test(){   // Parameterless construtor
+
+//     this->num1 = 100;   // default value
+//     this->num2 = 200;
+
+//     }
+
+
+//     Test(int num1, int num2){   //  Parameterized onstructor
+//         this->num1 = num1;
+//         this->num2 = num2;
+//     }
+//     Test(int num1, int num2, int num3){   //  Parameterized onstructor
+//         this->num1 = num1;
+//         this->num2 = num2;
+//         this->num3 = num3;
+//     }
+
+
+//     void displayRecord(){
+//         cout<<"Num1 : "<<this->num1<<endl;
+//         cout<<"Num2 : "<<this->num2<<endl;
+//         cout<<"Num3 : "<<Test::num3<<endl;
+//     }
+
+
+// };
+
+// int Test::num3 = 500;  // Global definition
+
+// int main(){
+//     Test t1;
+//     t1.displayRecord();
+
+//     Test t2(10,20);
+//     t2.displayRecord();
+
+//     Test t3(10,20,30);
+//     t3.displayRecord();
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+// public:
+//     //constructor
+
+//     Student(){
+//         cout<<"Constructor called. Object created."<<endl;
+//     }
+
+// //Destructor
+//     ~Student(){
+//         cout<<"Destructor Called. Object Destroyed."<<endl;
+//     }
+// };
+
+
+// int main(){
+//     Student s1;
+//     Student s2;
+// }
+
+// Reference Variable
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int a =10;
+
+//     int &b = a;
+
+//     cout<<"Value of A : "<<a<<endl;
+
+//     cout<<"Value of B : "<<b<<endl;
+//     cout<<"Value of A : "<<&a<<endl;
+
+//     cout<<"Value of B : "<<&b<<endl;
+// }
+
+
+
+
+// Copy constructor -> shallow copy constructor
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Employee{
+//     public:
+//     string name;
+//     int age;
+//     int salary;
+
+//     public:
+
+// //parameterized constructor
+
+//     Employee(string name, int age, int salary){
+//         this->name = name;
+//         this->age = age;
+//         this->salary = salary;
+//     }
+
+// //copy constructor
+
+//     Employee(Employee &other){
+//         this->name = other.name;
+//         this->age = other.age;
+//         this->salary = other.salary;
+//     }
+
+//     void display(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Salary : "<<salary<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Employee e1("Pawan",24,12345);
+//     Employee e2 = e1;  // copy object
+
+//     e2.display();
+
+// }
+
+// Single Inheritance
+
+// #include <iostream>
+// using namespace std;
+// // Base class
+// class Animal {
+// public:
+//     void eat() {
+//         cout << "Eating..." << endl;
+//     }
+// };
+// // Derived class
+// class Dog : public Animal {
+// public:
+//     void bark() {
+//         cout << "Barking..." << endl;
+//     }
+// };
+// int main() {
+//     Dog d;
+//     d.eat();  // Inherited from Animal
+//     d.bark();
+//     return 0;
+// }
+
+// Multiple Inheritance 
+
+// #include <iostream>
+// using namespace std;
+// // Base class
+// class Animal {
+// public:
+//     void eat() {
+//         cout << "Eating..." << endl;
+//     }
+// };
+// // Base class
+// class Cat{
+//     public: 
+//     void meow(){
+//         cout<<"Meow..."<<endl;
+//     }
+// };
+// // Derived class
+// class Dog : public Animal , public Cat {
+// public:
+//     void bark() {
+//         cout << "Barking..." << endl;
+//     }
+// };
+// int main() {
+//     Dog d;
+//     d.eat();  // Inherited from Animal
+//     d.bark();
+//     d.meow();
+//     return 0;
+// }
+
+
+// Multilevel Inheritance
+
+
+// #include <iostream>
+// using namespace std;
+// // Base class
+// class Animal {
+// public:
+//     void eat() {
+//         cout << "Eating..." << endl;
+//     }
+// };
+// //Derive Class
+// class Cat : public Animal{
+//     public: 
+//     void meow(){
+//         cout<<"Meow..."<<endl;
+//     }
+// };
+// // Derived class
+// class Dog : public Cat {
+// public:
+//     void bark() {
+//         cout << "Barking..." << endl;
+//     }
+// };
+// int main() {
+//     Dog d;
+//     d.eat();  // Inherited from Animal
+//     d.bark();
+//     d.meow();
+//     return 0;
+// }
+
+// Hierarchical Inheritance
+
+// #include <iostream>
+// using namespace std;
+// // Base class
+// class Shape {
+// public:
+//     void draw() {
+//         cout << "Drawing Shape..." << endl;
+//     }
+// };
+// // Derived class 1
+// class Circle : public Shape {
+// public:
+//     void area() {
+//         cout << "Calculating Circle Area..." << endl;
+//     }
+// };
+// // Derived class 2
+// class Square : public Shape {
+// public:
+//     void area() {
+//         cout << "Calculating Square Area..." << endl;
+//     }
+// };
+// int main() {
+//     Circle c;
+//     Square s;
+//     c.draw();
+//     c.area();
+//     s.draw();
+//     s.area();
+//     return 0;
+// }
+
+#include <iostream>
 using namespace std;
-
-class Employee{
-
-private:
-    //Data Member
-
-    string name;
-    int age;
-    int emp_id;
-    int salary;
-
-public : 
-
-
-void setDetails(string name, int age, int emp_id, int salary){
-    this->name = name;
-    this->age = age;
-    this->emp_id = emp_id;
-    this->salary = salary;
-}
-
-void display(){
-cout<<"Name : "<<name<<" Age : "<<age<<" Emp Id : "<<emp_id<<" Salary : "<<salary<<endl;
-}
+// Base class
+class Engine {
+public:
+    void start() {
+        cout << "Engine started." << endl;
+    }
 };
-
-int main(){
- Employee emp[2];
-
- emp[0].setDetails("Pawan",24,123,1000);
-
-
- emp[1].setDetails("Vansh",21,111,9999);
-
-
- cout<<"Employee Details : "<<endl;
-
- for(int i = 0; i<2; i++){
-    emp[i].display();
- }
+// Intermediate base class 1
+class Car : virtual public Engine {
+    
+};
+// Intermediate base class 2
+class Boat : virtual public Engine {};
+// Derived class
+class AmphibiousVehicle : public Car, public Boat {
+public:
+    void transform() {
+        cout << "Switching modes." << endl;
+    }
+};
+int main() {
+    AmphibiousVehicle av;
+    av.start();  // Inherited from Engine
+    av.transform();
+    return 0;
 }
